@@ -5,7 +5,7 @@ AvoinMinisterio::Application.routes.draw do
 
   get "ideas/vote_flow"
 
-  devise_for :citizens, :controllers => { :omniauth_callbacks => "citizens/omniauth_callbacks" }
+  devise_for :citizens, :controllers => { :omniauth_callbacks => "citizens/omniauth_callbacks", registrations: "registrations" }
   
   resources :ideas do
     resources :comments
